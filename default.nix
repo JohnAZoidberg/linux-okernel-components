@@ -19,6 +19,14 @@ let
   kernel = pkgs.linuxPackages_latest.kernel;
 in
 {
+  userspace-tools = stdenv.mkDerivation {
+    name = "okernel-userspace-tools";
+    src = ./userspace_tools/.;
+
+    buildInputs = [ glibc.static ];
+
+    makeFlags = "DESTDIR= PREFIX=$(out)";
+  };
   kvmod = buildModule {
     inherit kernel;
     name = "kvmod";
