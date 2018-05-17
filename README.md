@@ -12,6 +12,10 @@
 
 4. Build the userspace tools found in sub-directory *userspace_tools* of this repository (linux-okernel-components).
 
+To build the userspace tools and kernel modules:
+
+Install `nix` and run `nix-build`.
+
 
 ## Running
 
