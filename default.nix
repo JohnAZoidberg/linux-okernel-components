@@ -1,7 +1,7 @@
 with import ./nixpkgs.nix;
 let
   buildModule =
-  { name, src, kernel ? null }:
+  { name, src, kernel }:
   stdenv.mkDerivation {
     inherit name;
     inherit src;
