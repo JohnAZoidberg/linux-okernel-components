@@ -6,6 +6,10 @@ uxt.o: uxt.c
 uxt: uxt.o
 	gcc uxt.o -o uxt
 
+install:
+	mkdir -p $(DESTDIR)$(PREFIX)/bin;
+	cp uxt $(DESTDIR)$(PREFIX)/bin/
+
 clean:
 	rm -f uxt.o
 	rm -f uxt

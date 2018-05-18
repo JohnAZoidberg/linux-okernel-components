@@ -6,6 +6,10 @@ bypass.o: bypass.c
 bypass: bypass.o
 	gcc bypass.o -o bypass
 
+install:
+	mkdir -p $(DESTDIR)$(PREFIX)/bin;
+	cp bypass params.sh $(DESTDIR)$(PREFIX)/bin/
+
 clean:
 	rm -f bypass.o
 	rm -f bypass
